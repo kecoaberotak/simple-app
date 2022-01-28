@@ -1,25 +1,22 @@
 import React from "react";
 
-// semua file yg diambil dari folder lain harus diimport
-import sweet from './img/sweet.jpg';
-
-const SingleComment = () => {
+const SingleComment = (props) => {
     return (
         <div className='comment'>
             <a href='/' className='avatar'>
-                <img src={sweet} alt='profile picture'></img>
+                <img src = {props.pic} alt ='profile picture'></img>
             </a>
             <div className='content'>
                 <a href='/' className='athor'>
-                    Carl
+                    {props.name}
                 </a>
                 <div className='metadata'>
                     <span className='date'>
-                        Today at 5:00PM
+                        {props.date}
                     </span>
                 </div>
                 <div className='text'>
-                    hello
+                    {props.text}
                 </div>
             </div>
         </div>
